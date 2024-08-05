@@ -1,0 +1,26 @@
+CREATE TABLE project_table (
+    project_id interger PRIMARY key,
+    project_name varchar(50) not null,
+    project_description text(250),
+    project_completed false
+);
+
+CREATE TABLE resource_table (
+    resource_id interger primary key,
+    resource_name varchar(50) not null,
+    resource_description text(250)
+);
+
+CREATE TABLE task_table (
+    task_id interger primary key,
+    task_description text(250) not null,
+    task_notes,
+    task_completed false,
+    FOREIGN KEY (project_id) REFERENCES project_table(project_id)
+);
+
+DELETE FROM project_table;
+DELETE FROM resource_table;
+DELETE FROM task_table;
+
+SQL Commands
