@@ -9,3 +9,16 @@ Content-Type: application/json
     "project_name": "Challenge",
     "project_description": "Complete Spring 14 Challenge"
 }
+
+###
+
+GET http://localhost:9000/api/resources
+
+###
+
+POST http://localhost:9000/api/resources
+Content-Type: application/json
+
+{
+    "resource_name": "heehoo"
+}
