@@ -22,3 +22,17 @@ Content-Type: application/json
 {
     "resource_name": "heehoo"
 }
+
+###
+
+GET http://localhost:9000/api/tasks
+
+###
+
+POST http://localhost:9000/api/tasks
+Content-Type: application/json
+
+{
+    "task_description": "Post NEW task description",
+    "project_id": 1
+}
