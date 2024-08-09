@@ -1,25 +1,3 @@
-CREATE TABLE project_table (
-    project_id interger PRIMARY key AUTOINCREMENT not null,
-    project_name varchar(50) not null,
-    project_description text(250),
-    project_completed false
-);
-
-CREATE TABLE resource_table (
-    resource_id interger primary key AUTOINCREMENT not null,
-    resource_name varchar(50) not null,
-    resource_description text(250)
-);
-
-CREATE TABLE task_table (
-    task_id interger primary key AUTOINCREMENT not null,
-    task_description text(250) not null,
-    task_notes,
-    task_completed false,
-    FOREIGN KEY (project_id) REFERENCES project_table(project_id)
-);
-
-DELETE FROM project_table;
-DELETE FROM resource_table;
-DELETE FROM task_table;
-SQL Commands
+SELECT t.*, p.project_name, p.project_description
+FROM tasks t
+JOIN projects p ON t.project_id = p.project_id
